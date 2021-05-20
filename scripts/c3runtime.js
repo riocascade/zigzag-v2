@@ -3195,6 +3195,11 @@ WaypointYAt(i){return this._GetWaypointYAt(i)}}};
 			const v1 = p._GetNode(1).GetVar();
 			return () => n0.ExpObject(v1.GetValue());
 		},
+		() => "score",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and("x", v0.GetValue());
+		},
 		() => "ordered sentence",
 		p => {
 			const n0 = p._GetNode(0);
@@ -3220,11 +3225,6 @@ WaypointYAt(i){return this._GetWaypointYAt(i)}}};
 			return () => and("New Recording ", (v0.GetValue() + 1));
 		},
 		() => "sentence",
-		() => "score",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => and("x", v0.GetValue());
-		},
 		() => "timer",
 		p => {
 			const v0 = p._GetNode(0).GetVar();
